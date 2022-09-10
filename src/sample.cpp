@@ -29,7 +29,7 @@
 
 // A sample program demonstrating using Google C++ testing framework.
 
-#include "sample.h"
+#include "sample.hpp"
 
 #include <string.h>
 
