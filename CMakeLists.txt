@@ -1,12 +1,17 @@
 cmake_minimum_required(VERSION 3.22)
 
-set(PROJECT_NAME_STR cpp_gtest)
-project(${PROJECT_NAME_STR} C CXX)
+project(
+        cpp_gtest
+        VERSION 0.0.1
+        DESCRIPTION "C++ CMake GTest Template Project"
+        LANGUAGES C CXX)
 
 # GoogleTest requires at least C++11
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+include(FetchContent)
 
 #-------------------
 # CMake Modules
