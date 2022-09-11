@@ -2,18 +2,6 @@
 
 #include "gtest/gtest.h"
 
-/**\file example_test.cc
- *
- * \test Example Tests
- *
- * Examples of Google Test [Exception Assertions](https://google.github.io/googletest/reference/assertions.html#exceptions),
- * [Death Tests](https://github.com/google/googletest/blob/main/docs/advanced.md#user-content-death-tests)
- *
- *  * Type   | Test Name          | Description
- * :-------- | :----------------- | :---------
- * Exception | LessThanZeroThrows | Validate square_root throws exception on less than zero
- *
- */
 namespace GTestExamples {
     TEST(DivideTests, Positive) {
         EXPECT_EQ(GTestExamples::divide(2, 1), 2.0);
