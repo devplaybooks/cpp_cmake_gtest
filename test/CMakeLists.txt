@@ -19,7 +19,7 @@ FetchContent_MakeAvailable(googletest)
 include(GoogleTest)
 
 set(TEST_NAME SampleTests)
-add_executable(${TEST_NAME} sample_test.cpp)
+add_executable(${TEST_NAME} example_test.cpp)
 target_link_libraries(${TEST_NAME} PRIVATE src gtest_main)
 gtest_discover_tests(${TEST_NAME})
 add_test(NAME TestSampleTests COMMAND ${TEST_NAME} )
