@@ -3,26 +3,44 @@
 #include <cmath>
 #include "gtest/gtest.h"
 
+// Standard Catchall Exit Code https://tldp.org/LDP/abs/html/exitcodes.html
+const int ERROR_CODE = 1;
+
 namespace GTestExamples {
-    namespace DeathTests {
-        // Standard Catchall Exit Code https://tldp.org/LDP/abs/html/exitcodes.html
-        const int ERROR_CODE = 1;
-
-        double square_root(double num) {
-            if (num < 0.0) {
-                std::cerr << "Less Than Zero Error";
-                exit(ERROR_CODE);
-            }
-            return sqrt(num);
+    double square_root(double num) {
+        if (num < 0.0) {
+            std::cerr << "Less Than Zero Error";
+            exit(ERROR_CODE);
         }
+        return sqrt(num);
+    }
 
-        TEST(MyDeathTests, SquareRoot) {
-            EXPECT_EQ(DeathTests::square_root(0.0), 0.0);
-            EXPECT_EQ(DeathTests::square_root(4.0), 2.0);
-            EXPECT_DEATH(DeathTests::square_root(-1.0), "Less Than Zero Error");
-            EXPECT_EXIT(DeathTests::square_root(-1.0), testing::ExitedWithCode(DeathTests::ERROR_CODE),
-                        "Less Than Zero");
+    TEST(SquareRootTests, Positive) {
+        EXPECT_EQ(GTestExamples::square_root(0.0), 0.0);
+        EXPECT_EQ(GTestExamples::square_root(4.0), 2.0);
+    }
+
+    TEST(SquareRootTests, LessThanOneCausesDeath) {
+        EXPECT_DEATH(GTestExamples::square_root(-1.0), "Less Than Zero Error");
+        EXPECT_EXIT(GTestExamples::square_root(-1.0), testing::ExitedWithCode(ERROR_CODE),
+                    "Less Than Zero");
+    }
+
+    double divide(int dividend, int divisor) {
+        if (divisor < 1) {
+            throw std::runtime_error("Less Than Zero Error");
         }
+        return dividend / divisor;
+    }
+
+    TEST(DivideTests, Positive) {
+        EXPECT_EQ(GTestExamples::divide(2, 1), 2.0);
+        EXPECT_EQ(GTestExamples::divide(0, 4), 0.0);
+    }
+
+    TEST(DivideTests, LessThanZeroThrows) {
+        EXPECT_ANY_THROW(GTestExamples::divide(5, 0));
+        EXPECT_THROW(GTestExamples::divide(3 , -2), std::runtime_error);
     }
 }
 
