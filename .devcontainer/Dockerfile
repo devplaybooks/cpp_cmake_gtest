@@ -16,10 +16,10 @@ RUN  apt-get update; \
     libgl1-mesa-dev libglu1-mesa-dev '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
 
 
-# Download version 3.21 from CMake
-RUN curl -OL https://github.com/Kitware/CMake/releases/download/v3.21.2/cmake-3.21.2-linux-x86_64.sh
+# Download version 3.25 from CMake
+RUN curl -OL https://github.com/Kitware/CMake/releases/download/v3.25.1/cmake-3.25.1-linux-x86_64.sh
 
-RUN chmod +x ./cmake-3.21.2-linux-x86_64.sh && ./cmake-3.21.2-linux-x86_64.sh --skip-license --prefix=/opt/pyenv/versions/3.7.5/ && rm ./cmake-3.21.2-linux-x86_64.sh
+RUN chmod +x ./cmake-3.25.1-linux-x86_64.sh && ./cmake-3.25.1-linux-x86_64.sh --skip-license --prefix=/opt/pyenv/versions/3.7.5/ && rm ./cmake-3.25.1-linux-x86_64.sh
 
 USER conan
 
