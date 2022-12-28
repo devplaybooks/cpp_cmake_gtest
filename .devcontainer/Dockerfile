@@ -21,7 +21,7 @@ RUN curl -OL https://github.com/Kitware/CMake/releases/download/v3.21.2/cmake-3.
 
 RUN chmod +x ./cmake-3.21.2-linux-x86_64.sh && ./cmake-3.21.2-linux-x86_64.sh --skip-license --prefix=/opt/pyenv/versions/3.7.5/ && rm ./cmake-3.21.2-linux-x86_64.sh
 
-USER vscode
+USER conan
 
 # Download and install vcpkg
 RUN curl -OL https://github.com/microsoft/vcpkg/archive/refs/tags/2021.05.12.tar.gz
