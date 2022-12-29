@@ -9,7 +9,7 @@
     "vadimcn.vscode-lldb",
     "cheshirekow.cmake-format",
     "eamodio.gitlens",
-    "xaver.clang-format"
+    "xaver.clang-format",
   ],
   "remoteEnv": {
     "DISPLAY": ":0"
