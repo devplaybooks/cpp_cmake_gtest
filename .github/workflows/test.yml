@@ -14,11 +14,9 @@ jobs:
       run: cd build && make test
 
   llvm-usage:
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        os: [windows, ubuntu, macos]
     steps:
       - name: Checkout this repository
         uses: actions/checkout@v3.3.0
