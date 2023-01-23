@@ -1,3 +1,6 @@
+[![Build and Test](https://github.com/devplaybooks/cpp_cmake_gtest/actions/workflows/test.yml/badge.svg)](https://github.com/devplaybooks/cpp_cmake_gtest/actions/workflows/test.yml)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
 # C++ Gtest Playbook
 
 C++ template for CMake and Google Test with a custom GitHub [Action](https://github.com/features/actions) and
