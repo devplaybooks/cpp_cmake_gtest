@@ -10,6 +10,7 @@ project(
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+#list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/modules")
 
 include(FetchContent)
 
@@ -32,3 +33,4 @@ enable_testing()
 include_directories(${COMMON_INCLUDES})
 add_subdirectory(src)
 add_subdirectory(test)
+include(modules/CodeCoverage.cmake)
