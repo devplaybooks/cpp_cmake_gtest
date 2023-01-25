@@ -10,7 +10,19 @@ project(
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-#list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/modules")
+
+#######
+# GCov
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+if(CMAKE_COMPILER_IS_GNUCXX)
+    include(CodeCoverage)
+    setup_target_for_coverage(${PROJECT_NAME}_coverage ${PROJECT_TEST_NAME} coverage)
+endif()
+if(CMAKE_COMPILER_IS_GNUCXX)
+    target_link_libraries(${PROJECT_TEST_NAME} gcov)
+endif()
+#
+########
 
 include(FetchContent)
 
@@ -33,4 +45,3 @@ enable_testing()
 include_directories(${COMMON_INCLUDES})
 add_subdirectory(src)
 add_subdirectory(test)
-include(modules/CodeCoverage.cmake)
