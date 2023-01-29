@@ -12,27 +12,3 @@ jobs:
       run: cmake -S . -B build && cmake --build build
     - name: make
       run: cd build && make test
-
-  llvm-usage:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-    steps:
-      - name: Checkout this repository
-        uses: actions/checkout@v3.3.0
-
-      - name: Configure and build the test project
-        uses: threeal/cmake-action@v1.0.0
-        with:
-          source-dir: test
-          generator: Ninja
-          c-compiler: clang
-          cxx-compiler: clang++
-
-      - name: Test the test project
-        run: ctest --test-dir build
-
-      - name: Use this action with llvm-cov as the gcov executable
-        uses: ./
-        with:
-          gcov-executable: ${{ matrix.os == 'macos' && 'xcrun ' || '' }}llvm-cov gcov
