@@ -16,7 +16,7 @@ jobs:
       run: cd build && make test
   coverage_report:
     name: Generate coverage report
-    needs: testing
+    needs: gtest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
