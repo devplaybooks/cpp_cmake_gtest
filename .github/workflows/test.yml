@@ -25,7 +25,7 @@ jobs:
       - name: Setup LCOV
         uses: hrishikesh-kadam/setup-lcov@v1
       - name: Report code coverage
-        uses: zgosalvez/github-actions-report-lcov@v2
+        uses: bartosz347/github-actions-report-lcov
         with:
           coverage-files: coverage/lcov.*.info
           minimum-coverage: 90
