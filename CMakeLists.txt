@@ -18,7 +18,7 @@ include(FetchContent)
 #-------------------
 # Source: https://github.com/bilke/cmake-modules
 # https://stackoverflow.com/questions/13116488/detailed-guide-on-using-gcov-with-cmake-cdash
-#list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/modules")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 #-------------------
 # set common include folder for module
