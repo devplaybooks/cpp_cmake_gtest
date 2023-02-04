@@ -8,6 +8,8 @@ jobs:
     steps:
     - name: Checkout this repository
       uses: actions/checkout@v3
+    - name: Setup LCOV
+      uses: hrishikesh-kadam/setup-lcov@v1
     - name: configure
       run: cmake -S . -B build && cmake --build build
     - name: make
