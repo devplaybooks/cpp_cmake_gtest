@@ -1,17 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+// Based on https://github.com/microsoft/vscode-remote-try-cpp?tab=readme-ov-file
 {
+  "name": "C++ Dev Playbook",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "extensions": [
-    "ms-vscode.cpptools",
-    "ms-vscode.cmake-tools",
-    "twxs.cmake",
-    "vadimcn.vscode-lldb",
-    "cheshirekow.cmake-format",
-    "eamodio.gitlens",
-    "xaver.clang-format",
-  ],
-  "remoteEnv": {
-    "DISPLAY": ":0"
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "cheshirekow.cmake-format",
+        "eamodio.gitlens",
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "streetsidesoftware.code-spell-checker",
+        "twxs.cmake",
+        "vadimcn.vscode-lldb",
+        "xaver.clang-format"
+      ]
+    }
   }
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "gcc -v",
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }
