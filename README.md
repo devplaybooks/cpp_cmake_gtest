@@ -26,3 +26,11 @@ $❯ cd ..
 
 * [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)
 * [Your GitHub Codespaces](https://github.com/codespaces)
+
+## Possible Resources
+
+* [Hunter](https://hunter.readthedocs.io/en/latest/) 
+  * [GitHub](https://github.com/cpp-pm/hunter)
+  * [A Quick introduction to Hunter](https://kxygk.github.io/hunterintro.html)
+  * [C++ package managers in CMake: Hunter and Conan](https://www.reddit.com/r/cpp/comments/hjpwd0/c_package_managers_in_cmake_hunter_and_conan/)
+* [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake)
