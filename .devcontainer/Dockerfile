@@ -16,5 +16,12 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
 #    git python3 cmake g++ python-is-python3
 
 # [Optional] Uncomment this section to install additional packages.
- RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-     && apt-get -y install --no-install-recommends python-is-python3
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends python-is-python3
+
+# Add ./bin to PATH
+ENV PATH="./bin:${PATH}"
+
+# Install CPM.cmake https://github.com/cpm-cmake/CPM.cmake
+RUN mkdir -p cmake
+RUN wget -O cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake

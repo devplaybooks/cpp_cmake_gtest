@@ -1,4 +1,10 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.24)
+# For older versions of CMake you will need to set CMP0135 to NEW 
+# in order to aboid warnings from Policy CMP0135
+# https://cmake.org/cmake/help/latest/policy/CMP0135.html
+# if(POLICY CMP0135)
+#     cmake_policy(SET CMP0135 NEW)
+# endif()
 
 project(
         cpp_gtest
