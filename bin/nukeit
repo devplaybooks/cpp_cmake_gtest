@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
-rm -rf build
+if [ -d "build" ]; then
+    rm -rf build
+    echo "💣️ build nuked"
+fi
+
+if [ -d "cmake-build-debug" ]; then
+    rm -rf cmake-build-debug
+    echo "💣️ cmake-build-debug nuked"
+fi

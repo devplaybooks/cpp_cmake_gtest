@@ -23,5 +23,5 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 ENV PATH="./bin:${PATH}"
 
 # Install CPM.cmake https://github.com/cpm-cmake/CPM.cmake
-RUN mkdir -p cmake
-RUN wget -O cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake
+#RUN mkdir -p cmake
+#RUN wget -O cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake
