@@ -19,6 +19,7 @@ $❯ cd ..
 ## Dependencies
 
 * [CMake](https://cmake.org/)
+  * [CPM.make](https://github.com/cpm-cmake/CPM.cmake)
 * [GoogleTest](https://github.com/google/googletest)
     * [User’s Guide](https://google.github.io/googletest/)
 
