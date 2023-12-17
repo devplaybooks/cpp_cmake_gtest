@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import hashlib
+import os
+import urllib.request
+
+
+def compute_sha256(my_file_path):
+    sha256_hash = hashlib.sha256()
+    with open(my_file_path, "rb") as f:
+        for byte_block in iter(lambda: f.read(4096), b""):
+            sha256_hash.update(byte_block)
+    return sha256_hash.hexdigest()
+
+
+def download_file(my_url, my_file_path):
+    urllib.request.urlretrieve(my_url, my_file_path)
+
+
+url = 'https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip'
+file_path = 'bin/gtest.zip'
+
+download_file(url, file_path)
+print(compute_sha256(file_path))
+
+# delete the file
+os.remove(file_path)
