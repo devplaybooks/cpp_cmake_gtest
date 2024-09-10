@@ -18,4 +18,13 @@ namespace GTestExamples {
         }
         return sqrt(num);
     }
+
+    /// Example Class for demonstrating mocking a template method
+    /// See https://google.github.io/googletest/gmock_cook_book.html#mocking-class-templates
+    template <typename T> 
+    class GTestExamplesClass {
+    public:
+        virtual ~GTestExamplesClass() = default;
+        virtual T methodToMock(T value) = 0;
+    };
 }

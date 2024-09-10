@@ -20,5 +20,5 @@ include(GoogleTest)
 
 set(TEST_NAME SampleTests)
 add_executable(${TEST_NAME} example_test.cpp)
-target_link_libraries(${TEST_NAME} PRIVATE src gtest_main)
+target_link_libraries(${TEST_NAME} PRIVATE src gtest_main gmock_main)
 gtest_discover_tests(${TEST_NAME})

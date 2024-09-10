@@ -19,6 +19,9 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include(FetchContent)
 
+# add dependencies
+include(cmake/CPM.cmake)
+
 #-------------------
 # CMake Modules
 #-------------------

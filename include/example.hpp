@@ -5,4 +5,8 @@ namespace GTestExamples {
     double divide(int dividend, int divisor);
 
     double square_root(double num);
+
+    // GTestExamplesClass template class
+    template <typename T>
+    class GTestExamplesClass;
 }

@@ -21,7 +21,8 @@ $❯ cd ..
 * [CMake](https://cmake.org/)
   * [CPM.make](https://github.com/cpm-cmake/CPM.cmake)
 * [GoogleTest](https://github.com/google/googletest)
-    * [User’s Guide](https://google.github.io/googletest/)
+  * [User’s Guide](https://google.github.io/googletest/)
+    * [Mocking Class Templates](https://google.github.io/googletest/gmock_cook_book.html#mocking-class-templates)
 
 ## Resources
 
